@@ -33,8 +33,16 @@ def normalize(input_string):
              >>> tp.normalize(input_string2)
              'extra space'
     """
-    normalized_string = None
-    return normalized_string
+    #양 옆 공백제거
+    normalized_string = input_string.strip()
+
+    #소문자로 전환
+    normalized_string = normalized_string.lower()
+
+    #띄어쓰기 작업
+    normalized_string_list = normalized_string.split()
+
+    return " ".join(normalized_string_list)
 
 
 def no_vowels(input_string):
@@ -58,5 +66,39 @@ def no_vowels(input_string):
             >>> tp.normalize(input_string2)
             ''W lv Pythn!'
     """
-    no_vowel_string = None
+    no_vowel_string = input_string
+
+    #a 제거
+    while no_vowel_string.find('a') != -1:
+        no_vowel_string = no_vowel_string.replace('a','')
+    #e 제거
+    while no_vowel_string.find('e') != -1:
+        no_vowel_string = no_vowel_string.replace('e','')
+    #i 제거
+    while no_vowel_string.find('i') != -1:
+        no_vowel_string = no_vowel_string.replace('i','')
+    #o 제거
+    while no_vowel_string.find('o') != -1:
+        no_vowel_string = no_vowel_string.replace('o','')
+    #u 제거
+    while no_vowel_string.find('u') != -1:
+        no_vowel_string = no_vowel_string.replace('u','')
+
+    #A 제거
+    while no_vowel_string.find('A') != -1:
+        no_vowel_string = no_vowel_string.replace('A','')
+    #E 제거
+    while no_vowel_string.find('E') != -1:
+        no_vowel_string = no_vowel_string.replace('E','')
+    #I 제거
+    while no_vowel_string.find('I') != -1:
+        no_vowel_string = no_vowel_string.replace('I','')
+    #O 제거
+    while no_vowel_string.find('O') != -1:
+        no_vowel_string = no_vowel_string.replace('O','')
+    #U 제거
+    while no_vowel_string.find('U') != -1:
+        no_vowel_string = no_vowel_string.replace('U','')
+    return no_vowel_string
+
     return no_vowel_string
