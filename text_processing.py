@@ -100,5 +100,3 @@ def no_vowels(input_string):
     while no_vowel_string.find('U') != -1:
         no_vowel_string = no_vowel_string.replace('U','')
     return no_vowel_string
-
-    return no_vowel_string
