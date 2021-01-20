@@ -68,35 +68,13 @@ def no_vowels(input_string):
     """
     no_vowel_string = input_string
 
-    #a 제거
-    while no_vowel_string.find('a') != -1:
-        no_vowel_string = no_vowel_string.replace('a','')
-    #e 제거
-    while no_vowel_string.find('e') != -1:
-        no_vowel_string = no_vowel_string.replace('e','')
-    #i 제거
-    while no_vowel_string.find('i') != -1:
-        no_vowel_string = no_vowel_string.replace('i','')
-    #o 제거
-    while no_vowel_string.find('o') != -1:
-        no_vowel_string = no_vowel_string.replace('o','')
-    #u 제거
-    while no_vowel_string.find('u') != -1:
-        no_vowel_string = no_vowel_string.replace('u','')
+    chr_list = ['a','e','i','o','u']
 
-    #A 제거
-    while no_vowel_string.find('A') != -1:
-        no_vowel_string = no_vowel_string.replace('A','')
-    #E 제거
-    while no_vowel_string.find('E') != -1:
-        no_vowel_string = no_vowel_string.replace('E','')
-    #I 제거
-    while no_vowel_string.find('I') != -1:
-        no_vowel_string = no_vowel_string.replace('I','')
-    #O 제거
-    while no_vowel_string.find('O') != -1:
-        no_vowel_string = no_vowel_string.replace('O','')
-    #U 제거
-    while no_vowel_string.find('U') != -1:
-        no_vowel_string = no_vowel_string.replace('U','')
+    for c in chr_list:
+        while no_vowel_string.find(c) != -1:
+            no_vowel_string = no_vowel_string.replace(c,'')
+        c = c.upper()
+        while no_vowel_string.find(c) != -1:
+            no_vowel_string = no_vowel_string.replace(c,'')
+            
     return no_vowel_string
